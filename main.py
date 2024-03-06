@@ -44,14 +44,20 @@ def angle_update():
         x1 = float(x1)
         x2 = float(x2)
         angle1, angle2 = inv_kin(x1, x2, angles[0], angles[1])
-        angle1 = (float(angle1)%360 + 360)%360
-        angle2 = (float(angle2)%360 + 360)%360
+        angle1 = float(angle1)%360
+        angle2 = float(angle2)%360
+        
+        if(angle1 > 180):
+            angle1 = angle1 - 360
+        if(angle2 > 180):
+            angle2 = angle2 - 360
         
         print('Angles:', angle1, angle2)
         
         # animate from angles[0] to angle1 and angles[1] to angle2
         delta1 = (angle1 - angles[0])/100
         delta2 = (angle2 - angles[1])/100
+        
         for i in range(100):
             angles[0] = angles[0] + delta1
             angles[1] = angles[1] + delta2
