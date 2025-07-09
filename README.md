@@ -20,7 +20,7 @@ This project simulates a **3-DoF planar robotic arm** and uses a numerical inver
 numerical-inv-kin/
 │
 ├── main.py                 # Main script that visualizes and animates the robot
-├── inv\_kin\_calculate.py    # Numerical inverse kinematics calculation module
+├── inv_kin_calculate.py    # Numerical inverse kinematics calculation module
 ├── screen-capture.gif      # Demo GIF showing functionality
 └── README.md               # Project documentation (this file)
 ```
